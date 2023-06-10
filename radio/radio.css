@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #07afd9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e2b35;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radio-container {
+  position: relative;
+  height: 7rem;
+  width: 7rem;
+  margin: 0.5rem;
+}
+
+.radio-container input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.radio-container .radio-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.radio-container .icon {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 3px;
+}
+
+.radio-container label {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.radio-container input:checked + .radio-tile {
+  background: var(--primary-color);
+  box-shadow: 0 0 12px var(--primary-color);
+}
+
+.radio-container input:hover + .radio-tile {
+  box-shadow: 0 0 12px var(--primary-color);
+}
+
+.radio-container input:checked + .radio-tile .icon,
+.radio-container input:checked + .radio-tile label {
+  color: #fff;
+}
